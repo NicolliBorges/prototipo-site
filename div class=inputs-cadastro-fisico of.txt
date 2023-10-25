@@ -1,0 +1,180 @@
+<div class="inputs-cadastro-fisico ofertas-container">
+                            <button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#myModal">
+                              Clique aqui para receber ofertas de leilões
+                            </button>
+                          </div>
+                          </div>
+                          
+                          <!-- Modal -->
+                          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <!-- Adicione o botão de sair (X) no topo do modal -->
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                  <!-- Adicione a logo aqui -->
+                                  <img src="Captura de tela 2023-10-24 150022.png" alt="Logo da Empresa" class="modal-logo">
+                                </div>
+                                <div class="modal-body">
+                                  <!-- Seu formulário aqui -->
+                                  <form>
+                                    <label for="nome">Nome completo</label>
+                                    <input type="text" id="nome" name="nome" required>
+                              
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                              
+                                    <label for="celular">Celular</label>
+                                    <input type="tel" id="celular" name="celular" required>
+                                    <!-- Adicione os outros campos conforme necessário -->
+                                    <!-- Adicione as opções de leilão -->
+                                    <label for="tipoLeilao">Qual tipo de leilão você procura?</label>
+                                    <ol id="tipoLeilao" class="checkbox-list">
+                                    <li><input type="checkbox" id="casasSobrados" name="tipoLeilao" value="Casas e Sobrados">Casas e Sobrados</li>
+                                    <li><input type="checkbox" id="apartamentos" name="tipoLeilao" value="Apartamentos">Apartamentos</li>
+                                    <li><input type="checkbox" id="prediosGalpoes" name="tipoLeilao" value="Prédios e Galpões">Prédios e Galpões</li>
+                                    <li><input type="checkbox" id="salasComerciais" name="tipoLeilao" value="Salas Comerciais">Salas Comerciais</li>
+                                    <li><input type="checkbox" id="terrenos" name="tipoLeilao" value="Terrenos (Pequenos, Médios e Grandes)">Terrenos (Pequenos, Médios e Grandes)</li>
+                                    <li><input type="checkbox" id="sitiosChacaras" name="tipoLeilao" value="Sítios, Chácaras e Fazendas">Sítios, Chácaras e Fazendas</li>
+                                    <li><input type="checkbox" id="automoveisItensDiversos" name="tipoLeilao" value="Automóveis e Itens Diversos">Automóveis e Itens Diversos</li>
+                                    <li><input type="checkbox" id="cotasInvestimentoTitulos" name="tipoLeilao" value="Cotas de Investimento e Títulos">Cotas de Investimento e Títulos</li>
+                                    </ol>
+
+                                    <!-- Adicione a caixa de seleção para os estados -->
+                                    <label for="estado">Tem preferência por qual Estado (UF)?</label>
+                                    <select id="estado" name="estado" multiple>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                    </select>
+
+
+                                  </form>
+                                </div>
+                                <div class="modal-footer">
+                                  <!-- Adicione o botão de enviar no rodapé do modal -->
+                                  <button type="button" class="btn btn-primary">Enviar</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <style>
+                            /* Estilo para a logo no cabeçalho do modal */
+                            .modal-logo {
+                                max-width: 100px; /* Defina a largura máxima da logo conforme necessário */
+                                margin-right: 10px; /* Ajuste a margem conforme necessário */
+                                position: absolute; /* Alteração aqui: posição absoluta para alinhar a logo à esquerda */
+                                top: 10px; /* Alteração aqui: ajuste conforme necessário para a posição vertical */
+                                left: 10px; /* Alteração aqui: ajuste conforme necessário para a posição horizontal */
+                            }
+                          
+                            /* Restante do seu estilo para o botão no modal */
+                            .btn-modal {
+                              background-color: black; /* Cor desejada para o botão */
+                              color: white; /* Cor do texto no botão */
+                              /* Adicione mais estilos conforme necessário */
+                              
+                            }
+                          
+                            .btn-modal:hover {
+                                background-color: darkred; /* Cor ao passar o mouse sobre o botão */
+                                /* Adicione mais estilos conforme necessário */
+                            }
+                            /* Fixa o corpo do documento quando o modal está aberto */
+                            body.modal-open {
+                                position: fixed;
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+                            }
+                            
+                            /* Adiciona um estilo para o modal */
+                            .modal {
+                                box-shadow: none;
+                                position: fixed;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                max-height: 90vh; /* Ajuste conforme necessário */
+                                overflow-y: auto;
+                                max-width: 90%; /* Ajuste conforme necessário */
+                                background-color: transparent; /* Alteração aqui: tornando o fundo do modal transparente */
+                            }
+                            
+                            /* Adiciona um estilo para o fundo do modal */
+                            .modal-backdrop {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: transparent !important; /* Alteração aqui: tornando o fundo transparente */
+                                z-index: 1040;
+                            }
+                            
+                            /* Adiciona um estilo para a área de conteúdo do modal */
+                            .modal-content {
+                                position: relative;
+                                box-shadow: none;
+                                background-color: transparent; /* Alteração aqui: tornando o fundo da área de conteúdo transparente */
+                            }
+                            
+                            /* Adiciona um estilo para o botão de fechar no modal */
+                            .modal-header .close {
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                color: #000; /* Cor do ícone de fechar */
+                                font-size: 24px;
+                            }
+                            
+                            
+                            /* Adiciona um estilo para o botão de enviar no rodapé do modal */
+                            .modal-footer .btn-primary {
+                                background-color: black; /* Cor desejada para o botão */
+                                color: white; /* Cor do texto no botão */
+                                /* Adicione mais estilos conforme necessário */
+                            }
+                            
+                            .modal-footer .btn-primary:hover {
+                                background-color: darkred; /* Cor ao passar o mouse sobre o botão */
+                                /* Adicione mais estilos conforme necessário */
+                            }
+                            
+                            .modal.fade.show {
+                                box-shadow: none !important;
+                              }
+                              /* Remover sombra do modal */
+                              .modal-body form {
+                                max-height: 70vh; /* Porcentagem da altura da viewport */
+                                overflow-y: auto; /* Adiciona barra de rolagem interna quando o conteúdo é longo */
+                              }
+  
+                            
+                          </style>
