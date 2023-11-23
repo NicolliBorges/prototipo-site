@@ -8,28 +8,30 @@
         
     </title>
 
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://www.alfaleiloes.com/">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Alfa Leilões | Especialistas em Imóveis">
-        <meta property="og:image" content="https://alfaleiloes-novo.s3.amazonaws.com/media/assets/Novo_Projeto_11_CAJxkfv.webp">
+    
 
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Alfa Leilões | Especialistas em Imóveis">
-        <meta name="twitter:image" content="https://alfaleiloes-novo.s3.amazonaws.com/media/assets/Novo_Projeto_11_CAJxkfv.webp">
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://www.alfaleiloes.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alfa Leilões | Especialistas em Imóveis">
+<meta property="og:image" content="https://alfaleiloes-novo.s3.amazonaws.com/media/assets/Novo_Projeto_11_CAJxkfv.webp">
 
-        <meta property="og:title" content="Alfa Leilões | Especialistas em Imóveis">
-        <meta property="og:image" content="https://alfaleiloes-novo.s3.amazonaws.com/media/assets/Novo_Projeto_11_CAJxkfv.webp">
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alfa Leilões | Especialistas em Imóveis">
+<meta name="twitter:image" content="https://alfaleiloes-novo.s3.amazonaws.com/media/assets/Novo_Projeto_11_CAJxkfv.webp">
 
-
-        <meta itemprop="image" content="https://alfaleiloes-novo.s3.amazonaws.com/media/assets/Novo_Projeto_11_CAJxkfv.webp">
-        <meta name="keywords" content="Leilão, Alfa, Alfa Leilões,  Especialista em Imóveis">
-
-        <!-- meta tag facebook -->
+<meta property="og:title" content="Alfa Leilões | Especialistas em Imóveis">
+<meta property="og:image" content="https://alfaleiloes-novo.s3.amazonaws.com/media/assets/Novo_Projeto_11_CAJxkfv.webp">
 
 
-        <!-- meta tag google -->
+<meta itemprop="image" content="https://alfaleiloes-novo.s3.amazonaws.com/media/assets/Novo_Projeto_11_CAJxkfv.webp">
+<meta name="keywords" content="Leilão, Alfa, Alfa Leilões,  Especialista em Imóveis">
+
+<!-- meta tag facebook -->
+
+
+<!-- meta tag google -->
 
 <link rel="stylesheet" href="style.css">
 <script src="site.js"></script>
@@ -74,7 +76,36 @@
     https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css
     " rel="stylesheet">
 
-    <link rel="stylesheet" href="https://alfaleiloes-novo.s3.amazonaws.com/static/front_assets/dist/css/tailwind.css">    
+    <link rel="stylesheet" href="https://alfaleiloes-novo.s3.amazonaws.com/static/front_assets/dist/css/tailwind.css">
+
+    <script type="text/javascript">
+        axios.defaults.xsrfCookieName = 'csrftoken'
+        axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
+        axios.defaults.headers.post['X-CSRFTOKEN'] = 'Z6KKzkq1Amxaa7ghRWyt5HcEbfPbkROXlhN6bZWBdGPjZECxU36rTbQO4kO5UGQ6';
+
+        const AxiosController = new AbortController();
+
+        const csrf = 'Z6KKzkq1Amxaa7ghRWyt5HcEbfPbkROXlhN6bZWBdGPjZECxU36rTbQO4kO5UGQ6'
+        window.csrf = csrf
+        const api = axios.create({
+            signal:AxiosController.signal, 
+            baseURL: '/',
+            withCredentials: true,
+            headers: {
+                post: {
+                    'X-CSRFTOKEN': csrf
+                },
+                "X-CSRFToken": csrf,
+
+            },
+            xsrfCookieName: "csrftoken",
+            xsrfHeaderName: "X-CSRFTOKEN",
+        })
+
+
+    </script>
+
+    
 
     
 
@@ -142,11 +173,26 @@
 							</div>
 						</div>
 					</div>
+					
+					
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<div id="id-password-reset" class="modal">
+		<div class="modal-content">
+			<span class="modal-close" onclick="if (!window.__cfRLUnblockHandlers) return false; hidePasswordResetModal()">×</span>
+			<h1 class="title-modal">LEMBRAR SENHA</h1>
+			<p class="sub-title-modal">Para obter uma nova senha de acesso informe seu e-mail de cadastro no site.</p>
+			<form action="/password_reset/" method="post" class="form-controller">
+				<input type="hidden" name="csrfmiddlewaretoken" value="Z6KKzkq1Amxaa7ghRWyt5HcEbfPbkROXlhN6bZWBdGPjZECxU36rTbQO4kO5UGQ6">
+
+				<input class="form-email" type="email" id="email" name="email" placeholder="Digite aqui seu email">
+				<input class="form-btn" type="submit" value="LEMBRAR">
+			</form>
+		</div>
+	</div>
 
 	<nav id="header" class="">
 		<div class="container">
@@ -182,6 +228,28 @@
 		</div>
 	</nav>
 </div>
+<!-- <form action="/cadastro_usuario/" method="POST">
+	<input type="hidden" name="csrfmiddlewaretoken" value="Z6KKzkq1Amxaa7ghRWyt5HcEbfPbkROXlhN6bZWBdGPjZECxU36rTbQO4kO5UGQ6">
+	<input type="email" name="email">
+	<input type="text" name="apelido">
+	<button type="submit">Olá</button>
+</form> -->
+
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+		var leiloesLink = document.getElementById('leiloes');
+		var dropdownMenu = document.querySelector('.dropdown-menu');
+
+		leiloesLink.addEventListener('click', function (event) {
+			event.preventDefault();
+			dropdownMenu.classList.toggle('active');
+		});
+
+	});
+
+</script>
+
+
 
 
     <div class="container-main" id="app" data-v-app=""><section id="input-cadastro-fisico">
@@ -268,12 +336,29 @@
                 <div class="input-cadastro-fisico">
                     <label for="">Estado</label>
                     <input type="text" name="estado" required="" class="readonly" tabindex="-1"></div><div class="input-cadastro-fisico"><label for="como_chegou">Como chegou ao site?</label><select name="como_chegou" required=""><option value="Folheto impresso">Folheto impresso</option><option value="Instagram">Instagram</option><option value="Facebook">Facebook</option><option value="Linkedin">Linkedin</option><option value="Imovelweb">Imovelweb</option><option value="VivaReal">VivaReal</option><option value="Zap Imóveis">Zap Imóveis</option><option value="OLX">OLX</option><option value="Publicjud">Publicjud</option><option value="Moving Imóveis">Moving Imóveis</option><option value="Google">Google</option><option value="Outros">Outros</option></select></div></div><div class="btn-cad">
+                         <!--<div class="inputs-cadastro-fisico ofertas-container">
+                            <div id="my modal" class="modal-ofertas">
+                                <div id="myModal" class="modal">
+                                    <div class="modal-content">
+                                      <span id="closeModalBtn" class="close">&times;</span>
+                                      <p>Aqui vai o conteúdo do seu modal, incluindo o formulário.</p>
+                                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta totam fugit necessitatibus molestias animi iure at, quo esse magni recusandae et eligendi nostrum eveniet libero ipsa ipsam labore, neque corrupti?</p>
+                                      
+                                    </div>
+                                    
+                                </div>
+                                    <button id="openModalBtn" class="button-ofertas">Clique aqui para receber ofertas de leilões</button><br>
+                                  </div>
+                          </div>-->
+                          <!-- Botão para abrir o modal -->
+          
                           <div class="inputs-cadastro-fisico ofertas-container">
                             <button type="button" class="btn btn-primary btn-modal cadastrar-btn" data-toggle="modal" data-target="#myModal">
                                 Cadastrar
                             </button>
                         </div>
                         
+                        <!-- Modal -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
@@ -282,11 +367,14 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
                                     <div class="modal-body">
                                         <form>
-                                            <br>
-                                            <br><br>
                                            <p> Vamos encaminhar as melhores oportunidades diretamente em seu WhatApp, por isso precisamos que nos informe quais são as suas preferencias:</p>
                                             <div class="form-group">
                                                 <label for="tipoLeilao">Qual tipo de leilão você procura?</label><br>
@@ -297,6 +385,7 @@
                                                     <!-- Adicione outros tipos de leilão conforme necessário -->
                                                 </select>
                                             </div>
+                                            
                                             <div class="form-group">
                                                 <label for="estado">Tem preferência por qual Estado (UF)?</label><br>
                                                 <select id="estado" name="estado" multiple size="5">
@@ -363,9 +452,7 @@
                                                     </script>
                                                     
                                             </div>
-                                            <!-- Estado -->
-                                            <!-- Estado -->
-                                           <!-- Estado -->
+                                            
                                            <div class="form-group">
                                             <label for="cidade">Cidade:</label><br>
                                             <input type="text" id="cidade" name="cidade" required>
@@ -380,138 +467,163 @@
                                                 <option value="locacao">Locação</option>
                                             </select>
                                         </div>
-                                    
-                
-                                    
-                        
-                                    <!-- Botões de cadastrar -->
-                                    <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Prosseguir</button>
-                                    <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Prosseguir sem preencher</button>
-                                </form>
+                                        
+                                        <div class="form-group">
+                                        <label for="tipoLeilao">Qual tipo de leilão você procura?</label>
+                                        <select id="tipoLeilao" name="tipoLeilao">
+                                            <option value="casasSobrados">Casas e Sobrados</option>
+                                            <option value="apartamentos">Apartamentos</option>
+                                            <option value="prediosGalpoes">Prédios e Galpões</option>
+                                            <option value="salasComerciais">Salas Comerciais</option>
+                                            <option value="terrenos">Terrenos (Pequenos, Médios e Grandes)</option>
+                                            <option value="sitiosChacaras">Sítios, Chácaras e Fazendas</option>
+                                            <option value="automoveisItensDiversos">Automóveis e Itens Diversos</option>
+                                            <option value="cotasInvestimentoTitulos">Cotas de Investimento e Títulos</option>
+                                        </select>
+                                    </div>
+
+                                            <!-- Botões de cadastrar -->
+
+                                            
+                                            <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Prosseguir</button>
+                                            <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Prosseguir sem preencher</button>
+
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <style>
+                                /* Restante do seu estilo para o botão no modal */
+                                .btn-modal {
+                                    background-color: black; /* Cor desejada para o botão */
+                                    color: white; /* Cor do texto no botão */
+                                    /* Adicione mais estilos conforme necessário */
+                                }
+                            
+                                .btn-modal:hover {
+                                    background-color: #fff; /* Cor ao passar o mouse sobre o botão */
+                                    color: #111; /* Cor do texto ao passar o mouse sobre o botão */
+                                    /* Adicione mais estilos conforme necessário */
+                                }
+                            
+                                body.modal-open {
+                                    position: fixed;
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow: hidden;
+                            }
+                                /* Adiciona um estilo para o modal */
+                                .modal {
+                                    display: none;
+                                    box-shadow: none;
+                                    position: fixed;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    width: 80%; /* Ajuste conforme necessário */
+                                    max-height: calc(100vh - 50px); /* Ajuste para garantir que o modal não ultrapasse a altura da tela */
+                                    overflow-y: auto;
+                                    background-color: transparent; /* Alteração aqui: tornando o fundo do modal transparente */
+                                }
+                            
+                                /* Adiciona um estilo para a área de conteúdo do modal */
+                                .modal-content {
+                                    background-color: #fff; /* Cor do fundo do modal */
+                                    position: relative;
+                                    box-shadow: none;
+                                    border-radius: 10px; /* Borda arredondada */
+                                }
+                            
+                                /* Adiciona um estilo para o botão de fechar no modal */
+                                .modal-header .close {
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 10px;
+                                    color: black; /* Cor do ícone de fechar */
+                                    font-size: 24px;
+                                }
+                                .modal-body select,
+                                .modal-body input {
+                                    width: 100%;
+                                    padding: 10px;
+                                    margin-bottom: 15px;
+                                    box-sizing: border-box;
+                                    border: 1px solid #ccc;
+                                    border-radius: 5px;
+                                }
+                                .modal-body {
+                                    display: block !important;
+                                    max-height: calc(100vh - 200px); /* Ajuste conforme necessário para garantir que o modal-body não ultrapasse a tela */
+                                    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo for maior que a altura disponível */
+                                }
+                               
+                            
+                                /* Adiciona um estilo para o botão de enviar no rodapé do modal */
+                                .modal-footer .btn-primary {
+                                    background-color: black; /* Cor desejada para o botão */
+                                    color: white; /* Cor do texto no botão */
+                                    /* Adicione mais estilos conforme necessário */
+                                }
+                            
+                                .modal-footer .btn-primary:hover {
+                                    background-color: white; /* Cor ao passar o mouse sobre o botão */
+                                    /* Adicione mais estilos conforme necessário */
+                                }
+                            
+                                .modal.fade.show {
+                                    box-shadow: none !important;
+                                }
+                                .modal.show{
+                                    display: block;
+                                }
+                                /* Remover sombra do modal */
+                                .modal-body {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            
+                                /* Ajuste para garantir que o conteúdo do modal não ultrapasse a tela */
+                                .modal-dialog {
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                }
+                                .cadastrar-btn {
+                                    letter-spacing: .05em;
+                                    color: #fff;
+                                    text-transform: uppercase;
+                                    cursor: pointer;
+                                    background-color: #111;
+                                    border: 2px solid #111;
+                                    margin-top: 30px;
+                                    padding: 10px 40px;
+                                    font-size: 17px;
+                                    font-weight: 500;
+                                    transition: background-color 0.2s, color 0.2s;
+                                    display: inline-block;
+                                }
+                                
+                                
+                            </style>
+                            
+                
                         
-                <style>
-                    /* Restante do seu estilo para o botão no modal */
-                    .btn-modal {
-                        background-color: black; /* Cor desejada para o botão */
-                        color: white; /* Cor do texto no botão */
-                        /* Adicione mais estilos conforme necessário */
-                    }
+                            
                 
-                    .btn-modal:hover {
-                        background-color: #fff; /* Cor ao passar o mouse sobre o botão */
-                        color: #111; /* Cor do texto ao passar o mouse sobre o botão */
-                        /* Adicione mais estilos conforme necessário */
-                    }
-                
-                    body.modal-open {
-                        position: fixed;
-                        width: 100%;
-                        height: 100%;
-                        overflow: hidden;
-                }
-                    /* Adiciona um estilo para o modal */
-                    .modal {
-                        display: none;
-                        box-shadow: none;
-                        position: fixed;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 80%; /* Ajuste conforme necessário */
-                        max-height: calc(100vh - 50px); /* Ajuste para garantir que o modal não ultrapasse a altura da tela */
-                        overflow-y: auto;
-                        background-color: transparent; /* Alteração aqui: tornando o fundo do modal transparente */
-                    }
-                
-                    /* Adiciona um estilo para a área de conteúdo do modal */
-                    .modal-content {
-                        background-color: #fff; /* Cor do fundo do modal */
-                        position: relative;
-                        box-shadow: none;
-                        border-radius: 10px; /* Borda arredondada */
-                    }
-                
-                    /* Adiciona um estilo para o botão de fechar no modal */
-                    .modal-header .close {
-                        position: absolute;
-                        top: 10px;
-                        right: 10px;
-                        color: black; /* Cor do ícone de fechar */
-                        font-size: 24px;
-                    }
-                    .modal-body select,
-                    .modal-body input {
-                        width: 100%;
-                        padding: 10px;
-                        margin-bottom: 15px;
-                        box-sizing: border-box;
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                    }
-                    .modal-body {
-                        display: block !important;
-                        max-height: calc(100vh - 200px); /* Ajuste conforme necessário para garantir que o modal-body não ultrapasse a tela */
-                        overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo for maior que a altura disponível */
-                    }
-                   
-                
-                    /* Adiciona um estilo para o botão de enviar no rodapé do modal */
-                    .modal-footer .btn-primary {
-                        background-color: black; /* Cor desejada para o botão */
-                        color: white; /* Cor do texto no botão */
-                        /* Adicione mais estilos conforme necessário */
-                    }
-                
-                    .modal-footer .btn-primary:hover {
-                        background-color: white; /* Cor ao passar o mouse sobre o botão */
-                        /* Adicione mais estilos conforme necessário */
-                    }
-                
-                    .modal.fade.show {
-                        box-shadow: none !important;
-                    }
-                    .modal.show{
-                        display: block;
-                    }
-                    /* Remover sombra do modal */
-                    .modal-body {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                
-                    /* Ajuste para garantir que o conteúdo do modal não ultrapasse a tela */
-                    .modal-dialog {
-                        max-width: 100%;
-                        max-height: 100%;
-                    }
-                    .cadastrar-btn {
-                        letter-spacing: .05em;
-                        color: #fff;
-                        text-transform: uppercase;
-                        cursor: pointer;
-                        background-color: #111;
-                        border: 2px solid #111;
-                        margin-top: 30px;
-                        padding: 10px 40px;
-                        font-size: 17px;
-                        font-weight: 500;
-                        transition: background-color 0.2s, color 0.2s;
-                        display: inline-block;
-                    }
+                        
+                          
+                          
                     
-                    
-                </style>
-                        
-                        
     
         
-       
+        </div>
+                
+                    
+                   
+                        
+                    </div>
 
     
 </div></div> 
