@@ -336,22 +336,7 @@
                 <div class="input-cadastro-fisico">
                     <label for="">Estado</label>
                     <input type="text" name="estado" required="" class="readonly" tabindex="-1"></div><div class="input-cadastro-fisico"><label for="como_chegou">Como chegou ao site?</label><select name="como_chegou" required=""><option value="Folheto impresso">Folheto impresso</option><option value="Instagram">Instagram</option><option value="Facebook">Facebook</option><option value="Linkedin">Linkedin</option><option value="Imovelweb">Imovelweb</option><option value="VivaReal">VivaReal</option><option value="Zap Imóveis">Zap Imóveis</option><option value="OLX">OLX</option><option value="Publicjud">Publicjud</option><option value="Moving Imóveis">Moving Imóveis</option><option value="Google">Google</option><option value="Outros">Outros</option></select></div></div><div class="btn-cad">
-                         <!--<div class="inputs-cadastro-fisico ofertas-container">
-                            <div id="my modal" class="modal-ofertas">
-                                <div id="myModal" class="modal">
-                                    <div class="modal-content">
-                                      <span id="closeModalBtn" class="close">&times;</span>
-                                      <p>Aqui vai o conteúdo do seu modal, incluindo o formulário.</p>
-                                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta totam fugit necessitatibus molestias animi iure at, quo esse magni recusandae et eligendi nostrum eveniet libero ipsa ipsam labore, neque corrupti?</p>
-                                      
-                                    </div>
-                                    
-                                </div>
-                                    <button id="openModalBtn" class="button-ofertas">Clique aqui para receber ofertas de leilões</button><br>
-                                  </div>
-                          </div>-->
-                          <!-- Botão para abrir o modal -->
-          
+
                           <div class="inputs-cadastro-fisico ofertas-container">
                             <button type="button" class="btn btn-primary btn-modal cadastrar-btn" data-toggle="modal" data-target="#myModal">
                                 Cadastrar
@@ -375,17 +360,22 @@
                                     <br>
                                     <div class="modal-body">
                                         <form>
-                                           <p> Vamos encaminhar as melhores oportunidades diretamente em seu WhatApp, por isso precisamos que nos informe quais são as suas preferencias:</p>
-                                            <div class="form-group">
-                                                <label for="tipoLeilao">Qual tipo de leilão você procura?</label><br>
-                                                <select id="tipoLeilao" name="tipoLeilao" required>
-                                                    <option value="judicial">Judicial</option>
-                                                    <option value="extrajudicial">Extrajudicial</option>
-                                                    <option value="alienacaoParticular">Alienação Particular</option>
-                                                    <!-- Adicione outros tipos de leilão conforme necessário -->
-                                                </select>
-                                            </div>
-                                            
+                                           <p> Vamos encaminhar as melhores oportunidades diretamente em seu WhatsApp, por isso precisamos que nos informe quais são as suas preferencias:</p>
+                                           <div class="form-group">
+                                            <label for="tipoLeilao">Qual tipo de imóvel você procura?</label>
+                                            <select id="tipoLeilao" name="tipoLeilao">
+                                                <option value="casasSobrados">Casas e Sobrados</option>
+                                                <option value="apartamentos">Apartamentos</option>
+                                                <option value="prediosGalpoes">Prédios e Galpões</option>
+                                                <option value="salasComerciais">Salas Comerciais</option>
+                                                <option value="terrenos">Terrenos (Pequenos, Médios e Grandes)</option>
+                                                <option value="sitiosChacaras">Sítios, Chácaras e Fazendas</option>
+                                                <option value="automoveisItensDiversos">Automóveis e Itens Diversos</option>
+                                                <option value="cotasInvestimentoTitulos">Cotas de Investimento e Títulos</option>
+                                            </select>
+                                        </div>
+
+
                                             <div class="form-group">
                                                 <label for="estado">Tem preferência por qual Estado (UF)?</label><br>
                                                 <select id="estado" name="estado" multiple size="5">
@@ -418,6 +408,11 @@
                                                     <option value="TO">Tocantins</option>
                                                     </select>
                                                     <br>
+                                                    <div class="form-group">
+                                                        <label for="cidade">Cidade:</label><br>
+                                                        <input type="text" id="cidade" name="cidade" required>
+                                                        </div>
+                                                        
                                                     <div class="form-group">
                                                         <label for="montante">Montante disponível para investimento:</label>
                                                         <select id="montante" name="montante" onchange="checkMontante()">
@@ -453,10 +448,7 @@
                                                     
                                             </div>
                                             
-                                           <div class="form-group">
-                                            <label for="cidade">Cidade:</label><br>
-                                            <input type="text" id="cidade" name="cidade" required>
-                                        </div>
+                                           
                                         
                                         <div class="form-group">
                                             <label for="finalidade">Finalidade de Aquisição:</label><br>
@@ -468,25 +460,13 @@
                                             </select>
                                         </div>
                                         
-                                        <div class="form-group">
-                                        <label for="tipoLeilao">Qual tipo de leilão você procura?</label>
-                                        <select id="tipoLeilao" name="tipoLeilao">
-                                            <option value="casasSobrados">Casas e Sobrados</option>
-                                            <option value="apartamentos">Apartamentos</option>
-                                            <option value="prediosGalpoes">Prédios e Galpões</option>
-                                            <option value="salasComerciais">Salas Comerciais</option>
-                                            <option value="terrenos">Terrenos (Pequenos, Médios e Grandes)</option>
-                                            <option value="sitiosChacaras">Sítios, Chácaras e Fazendas</option>
-                                            <option value="automoveisItensDiversos">Automóveis e Itens Diversos</option>
-                                            <option value="cotasInvestimentoTitulos">Cotas de Investimento e Títulos</option>
-                                        </select>
-                                    </div>
+                                       
 
                                             <!-- Botões de cadastrar -->
 
                                             
                                             <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Prosseguir</button>
-                                            <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Prosseguir sem preencher</button>
+                                            <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Continuar sem preencher</button>
 
                                         </form>
                                     </div>
@@ -494,6 +474,73 @@
                             </div>
                         </div>
                         <style>
+                                .close-container {
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 10px;
+                                }
+                                .close {
+                                    background: none; /* Alteração na cor de fundo para nenhum (transparente) */
+                                    border: none;
+                                    font-size: 24px;
+                                    cursor: pointer;
+                                }
+                                .close span {
+                                    display: block;
+                                    height: 2px;
+                                    width: 30px;
+                                    background-color: #ccc;
+                                    position: absolute;
+                                    top: 50%;
+                                    margin-top: -1px;
+                                }
+                                .close span:before,
+                                .close span:after {
+                                    content: '';
+                                    display: block;
+                                    height: 2px;
+                                    width: 30px;
+                                    background-color: #ccc;
+                                    position: absolute;
+                                    top: 50%;
+                                    margin-top: -1px;
+                                }
+                                .close span:before {
+                                    transform: rotate(45deg);
+                                    left: -8px;
+                                }
+                                .close span:after {
+                                    transform: rotate(-45deg);
+                                    right: -8px;
+                                }
+
+
+                                .close:before, .close:after {
+                                    content: '';
+                                    display: block;
+                                    height: 2px;
+                                    width: 30px;
+                                    background-color: #ccc; /* Cor da linha riscada */
+                                    position: absolute;
+                                    top: 50%;
+                                    margin-top: -1px;
+                                }
+                            
+                                .close:before {
+                                    transform: rotate(45deg);
+                                    left: -8px;
+                                }
+                            
+                                .close:after {
+                                    transform: rotate(-45deg);
+                                    right: -8px;
+                                }
+                                
+                                .modal-header {
+                                    border-radius: 10px 10px 0 0;
+                                    border-bottom: 2px solid #ccc;
+                                    position: relative;
+                                }
                                 /* Restante do seu estilo para o botão no modal */
                                 .btn-modal {
                                     background-color: black; /* Cor desejada para o botão */

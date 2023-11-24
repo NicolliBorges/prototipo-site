@@ -369,15 +369,21 @@
                                     </div>
                                     <div class="modal-body">
                                         <form>
-                                           <p> Vamos encaminhar as melhores oportunidades diretamente em seu WhatApp, por isso precisamos que nos informe quais são as suas preferencias:</p>
-                                            <div class="form-group">
-                                                <label for="tipoLeilao">Qual tipo de leilão você procura?</label><br>
-                                                <select id="tipoLeilao" name="tipoLeilao" required>
-                                                    <option value="judicial">Judicial</option>
-                                                    <option value="extrajudicial">Extrajudicial</option>
-                                                    <option value="alienacaoParticular">Alienação Particular</option>
-                                                    <!-- Adicione outros tipos de leilão conforme necessário -->
-                                                </select>
+                                           <p> Vamos encaminhar as melhores oportunidades diretamente em seu WhatsApp, por isso precisamos que nos informe quais são as suas preferencias:</p>
+
+
+                                           <div class="form-group">
+                                            <label for="tipoLeilao">Qual tipo de Imóvel você procura?</label>
+                                            <select id="tipoLeilao" name="tipoLeilao">
+                                                <option value="casasSobrados">Casas e Sobrados</option>
+                                                <option value="apartamentos">Apartamentos</option>
+                                                <option value="prediosGalpoes">Prédios e Galpões</option>
+                                                <option value="salasComerciais">Salas Comerciais</option>
+                                                <option value="terrenos">Terrenos (Pequenos, Médios e Grandes)</option>
+                                                <option value="sitiosChacaras">Sítios, Chácaras e Fazendas</option>
+                                                <option value="automoveisItensDiversos">Automóveis e Itens Diversos</option>
+                                                <option value="cotasInvestimentoTitulos">Cotas de Investimento e Títulos</option>
+                                            </select>
                                             </div>
                                             
                                             <div class="form-group">
@@ -411,7 +417,14 @@
                                                     <option value="SE">Sergipe</option>
                                                     <option value="TO">Tocantins</option>
                                                     </select>
-                                                    <br>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="cidade">Cidade:</label><br>
+                                                        <input type="text" id="cidade" name="cidade" required>
+                                                    </div>
+
+
+
                                                     <div class="form-group">
                                                         <label for="montante">Montante disponível para investimento:</label>
                                                         <select id="montante" name="montante" onchange="checkMontante()">
@@ -447,10 +460,7 @@
                                                     
                                             </div>
                                             
-                                           <div class="form-group">
-                                            <label for="cidade">Cidade:</label><br>
-                                            <input type="text" id="cidade" name="cidade" required>
-                                        </div>
+                                          
                                         
                                         <div class="form-group">
                                             <label for="finalidade">Finalidade de Aquisição:</label><br>
@@ -462,19 +472,7 @@
                                             </select>
                                         </div>
                                         
-                                        <div class="form-group">
-                                        <label for="tipoLeilao">Qual tipo de leilão você procura?</label>
-                                        <select id="tipoLeilao" name="tipoLeilao">
-                                            <option value="casasSobrados">Casas e Sobrados</option>
-                                            <option value="apartamentos">Apartamentos</option>
-                                            <option value="prediosGalpoes">Prédios e Galpões</option>
-                                            <option value="salasComerciais">Salas Comerciais</option>
-                                            <option value="terrenos">Terrenos (Pequenos, Médios e Grandes)</option>
-                                            <option value="sitiosChacaras">Sítios, Chácaras e Fazendas</option>
-                                            <option value="automoveisItensDiversos">Automóveis e Itens Diversos</option>
-                                            <option value="cotasInvestimentoTitulos">Cotas de Investimento e Títulos</option>
-                                        </select>
-                                    </div>
+                                        
 
                                             <!-- Botões de cadastrar -->
                                             <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Prosseguir</button>

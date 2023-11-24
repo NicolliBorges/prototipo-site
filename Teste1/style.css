@@ -1,0 +1,112 @@
+
+/* Restante do seu estilo para o botão no modal */
+.btn-modal {
+    background-color: black; /* Cor desejada para o botão */
+    color: white; /* Cor do texto no botão */
+    /* Adicione mais estilos conforme necessário */
+}
+
+.btn-modal:hover {
+    background-color: #fff; /* Cor ao passar o mouse sobre o botão */
+    color: #111; /* Cor do texto ao passar o mouse sobre o botão */
+    /* Adicione mais estilos conforme necessário */
+}
+
+body.modal-open {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* Adiciona um estilo para o modal */
+.modal {
+    display: none;
+    box-shadow: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajuste conforme necessário */
+    max-height: calc(100vh - 50px); /* Ajuste para garantir que o modal não ultrapasse a altura da tela */
+    overflow-y: auto;
+    background-color: transparent; /* Alteração aqui: tornando o fundo do modal transparente */
+}
+
+/* Adiciona um estilo para a área de conteúdo do modal */
+.modal-content {
+    background-color: #fff; /* Cor do fundo do modal */
+    position: relative;
+    box-shadow: none;
+    border-radius: 10px; /* Borda arredondada */
+}
+
+/* Adiciona um estilo para o botão de fechar no modal */
+.modal-header .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black; /* Cor do ícone de fechar */
+    font-size: 24px;
+}
+.modal-body select,
+.modal-body input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.modal-body {
+    display: block !important;
+    max-height: calc(100vh - 200px); /* Ajuste conforme necessário para garantir que o modal-body não ultrapasse a tela */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo for maior que a altura disponível */
+}
+
+
+/* Adiciona um estilo para o botão de enviar no rodapé do modal */
+.modal-footer .btn-primary {
+    background-color: black; /* Cor desejada para o botão */
+    color: white; /* Cor do texto no botão */
+    /* Adicione mais estilos conforme necessário */
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: white; /* Cor ao passar o mouse sobre o botão */
+    /* Adicione mais estilos conforme necessário */
+}
+
+.modal.fade.show {
+    box-shadow: none !important;
+}
+.modal.show{
+    display: block;
+}
+/* Remover sombra do modal */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajuste para garantir que o conteúdo do modal não ultrapasse a tela */
+.modal-dialog {
+    max-width: 100%;
+    max-height: 100%;
+}
+.cadastrar-btn {
+    letter-spacing: .05em;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #111;
+    border: 2px solid #111;
+    margin-top: 30px;
+    padding: 10px 40px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+    display: inline-block;
+}
+

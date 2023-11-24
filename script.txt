@@ -336,33 +336,57 @@
                 <div class="input-cadastro-fisico">
                     <label for="">Estado</label>
                     <input type="text" name="estado" required="" class="readonly" tabindex="-1"></div><div class="input-cadastro-fisico"><label for="como_chegou">Como chegou ao site?</label><select name="como_chegou" required=""><option value="Folheto impresso">Folheto impresso</option><option value="Instagram">Instagram</option><option value="Facebook">Facebook</option><option value="Linkedin">Linkedin</option><option value="Imovelweb">Imovelweb</option><option value="VivaReal">VivaReal</option><option value="Zap Imóveis">Zap Imóveis</option><option value="OLX">OLX</option><option value="Publicjud">Publicjud</option><option value="Moving Imóveis">Moving Imóveis</option><option value="Google">Google</option><option value="Outros">Outros</option></select></div></div><div class="btn-cad">
-
+                         <!--<div class="inputs-cadastro-fisico ofertas-container">
+                            <div id="my modal" class="modal-ofertas">
+                                <div id="myModal" class="modal">
+                                    <div class="modal-content">
+                                      <span id="closeModalBtn" class="close">&times;</span>
+                                      <p>Aqui vai o conteúdo do seu modal, incluindo o formulário.</p>
+                                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta totam fugit necessitatibus molestias animi iure at, quo esse magni recusandae et eligendi nostrum eveniet libero ipsa ipsam labore, neque corrupti?</p>
+                                      
+                                    </div>
+                                    
+                                </div>
+                                    <button id="openModalBtn" class="button-ofertas">Clique aqui para receber ofertas de leilões</button><br>
+                                  </div>
+                          </div>-->
+                          <!-- Botão para abrir o modal -->
+          
                           <div class="inputs-cadastro-fisico ofertas-container">
-                            <button type="button" class="btn btn-primary btn-modal cadastrar-btn" data-toggle="modal" data-target="#myModal">
-                                Cadastrar
+                            <button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#myModal">
+                                Clique aqui para receber ofertas de leilões
                             </button>
                         </div>
                         
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" black>
+                                        <img src="Captura de tela 2023-10-24 150022.png" alt="Logo da Empresa" class="modal-logo">
+                                        <!-- Adicione o botão de sair (X) no topo do modal -->
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
                                     <div class="modal-body">
+                                        <!-- Seu formulário aqui -->
                                         <form>
-                                           <p> Vamos encaminhar as melhores oportunidades diretamente em seu WhatsApp, por isso precisamos que nos informe quais são as suas preferencias:</p>
-                                           <div class="form-group">
-                                            <label for="tipoLeilao">Qual tipo de imóvel você procura?</label>
+                                            <div class="form-group">
+                                                <label for="nome">Nome completo</label>
+                                                <input type="text" class="form-control" id="nome" name="nome" required>
+                                            </div>
+                        
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="email" class="form-control" id="email" name="email" required>
+                                            </div>
+                        
+                                            <div class="form-group">
+                                                <label for="celular">Celular</label>
+                                                <input type="tel" class="form-control" id="celular" name="celular" required>
+                                            </div>
+                                            <label for="tipoLeilao">Qual tipo de leilão você procura?</label>
                                             <select id="tipoLeilao" name="tipoLeilao">
                                                 <option value="casasSobrados">Casas e Sobrados</option>
                                                 <option value="apartamentos">Apartamentos</option>
@@ -373,12 +397,10 @@
                                                 <option value="automoveisItensDiversos">Automóveis e Itens Diversos</option>
                                                 <option value="cotasInvestimentoTitulos">Cotas de Investimento e Títulos</option>
                                             </select>
-                                        </div>
-
-
+                                            <!-- Adicione a caixa de seleção para os estados -->
                                             <div class="form-group">
                                                 <label for="estado">Tem preferência por qual Estado (UF)?</label><br>
-                                                <select id="estado" name="estado" multiple size="5">
+                                                <select id="estado" name="estado" multiple>
                                                     <option value="AC">Acre</option>
                                                     <option value="AL">Alagoas</option>
                                                     <option value="AP">Amapá</option>
@@ -408,72 +430,33 @@
                                                     <option value="TO">Tocantins</option>
                                                     </select>
                                                     <br>
-                                                    <div class="form-group">
-                                                        <label for="cidade">Cidade:</label><br>
-                                                        <input type="text" id="cidade" name="cidade" required>
-                                                        </div>
-                                                        
-                                                    <div class="form-group">
-                                                        <label for="montante">Montante disponível para investimento:</label>
-                                                        <select id="montante" name="montante" onchange="checkMontante()">
-                                                            <option value="selecione">Selecione</option>
-                                                            <option value="ate100mil">Até 100.000</option>
-                                                            <option value="100mil500mil">R$100.000 a 500.000</option>
-                                                            <option value="500mil1milhao">R$ 500.000 a 1.000.000</option>
-                                                            <option value="acima1milhao">R$ Acima de 1.000.000</option>
-                                                            <option value="outros">Outros</option>
-                                                        </select>
-                                                    </div>
-                                                    
-                                                    <div id="outrosMontante" style="display:none;">
-                                                        <label for="montanteDe">De:</label>
-                                                        <input type="text" id="montanteDe" name="montanteDe">
-                                                        
-                                                        <label for="montanteAte">Até:</label>
-                                                        <input type="text" id="montanteAte" name="montanteAte">
-                                                    </div>
-                                                    
-                                                    <script>
-                                                        function checkMontante() {
-                                                            var montanteDropdown = document.getElementById("montante");
-                                                            var outrosMontante = document.getElementById("outrosMontante");
-                                                    
-                                                            if (montanteDropdown.value === "outros") {
-                                                                outrosMontante.style.display = "block";
-                                                            } else {
-                                                                outrosMontante.style.display = "none";
-                                                            }
-                                                        }
-                                                    </script>
-                                                    
+                                                    <label for="montante">Montante disponível para investimento:</label><br>
+                                                    <select id="montante" name="montante">
+                                                        <option value="selecione">Selecione</option>
+                                                        <option value="ate100mil">Até 100.000</option>
+                                                        <option value="100mil500mil">R$100.000 a 500.000</option>
+                                                        <option value="500mil1milhao">R$ 500.000 a 1.000.000</option>
+                                                        <option value="acima1milhao">R$ Acima de 1.000.000</option>
+                                                    </select>
                                             </div>
-                                            
-                                           
-                                        
-                                        <div class="form-group">
-                                            <label for="finalidade">Finalidade de Aquisição:</label><br>
-                                            <select id="finalidade" name="finalidade">
-                                                <option value="moradia">Moradia</option>
-                                                <option value="investimento">Investimento</option>
-                                                <option value="venda">Venda</option>
-                                                <option value="locacao">Locação</option>
-                                            </select>
-                                        </div>
-                                        
-                                       
-
-                                            <!-- Botões de cadastrar -->
-
-                                            
-                                            <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Prosseguir</button>
-                                            <button type="button" class="btn btn-primary cadastrar-btn" data-dismiss="modal">Continuar sem preencher</button>
-
                                         </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!-- Adicione o botão de enviar no rodapé do modal -->
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <style>
+                           .modal-logo {
+                                max-width: 100px; /* Defina a largura máxima da logo conforme necessário */
+                                margin-right: 10px; /* Ajuste a margem conforme necessário */
+                                position: absolute; /* Alteração aqui: posição absoluta para alinhar a logo à esquerda */
+                                top: 10px; /* Alteração aqui: ajuste conforme necessário para a posição vertical */
+                                left: 10px; /* Alteração aqui: ajuste conforme necessário para a posição horizontal */
+                            }
                                 /* Restante do seu estilo para o botão no modal */
                                 .btn-modal {
                                     background-color: black; /* Cor desejada para o botão */
@@ -482,8 +465,7 @@
                                 }
                             
                                 .btn-modal:hover {
-                                    background-color: #fff; /* Cor ao passar o mouse sobre o botão */
-                                    color: #111; /* Cor do texto ao passar o mouse sobre o botão */
+                                    background-color: darkred; /* Cor ao passar o mouse sobre o botão */
                                     /* Adicione mais estilos conforme necessário */
                                 }
                             
@@ -492,27 +474,25 @@
                                     width: 100%;
                                     height: 100%;
                                     overflow: hidden;
-                            }
+                                }
                                 /* Adiciona um estilo para o modal */
                                 .modal {
-                                    display: none;
                                     box-shadow: none;
                                     position: fixed;
                                     top: 50%;
                                     left: 50%;
                                     transform: translate(-50%, -50%);
                                     width: 80%; /* Ajuste conforme necessário */
-                                    max-height: calc(100vh - 50px); /* Ajuste para garantir que o modal não ultrapasse a altura da tela */
+                                    height: 80%; /* Ajuste conforme necessário */
                                     overflow-y: auto;
                                     background-color: transparent; /* Alteração aqui: tornando o fundo do modal transparente */
                                 }
                             
                                 /* Adiciona um estilo para a área de conteúdo do modal */
                                 .modal-content {
-                                    background-color: #fff; /* Cor do fundo do modal */
                                     position: relative;
                                     box-shadow: none;
-                                    border-radius: 10px; /* Borda arredondada */
+                                    background-color: transparent; /* Alteração aqui: tornando o fundo da área de conteúdo transparente */
                                 }
                             
                                 /* Adiciona um estilo para o botão de fechar no modal */
@@ -520,24 +500,9 @@
                                     position: absolute;
                                     top: 10px;
                                     right: 10px;
-                                    color: black; /* Cor do ícone de fechar */
+                                    color: blac; /* Cor do ícone de fechar */
                                     font-size: 24px;
                                 }
-                                .modal-body select,
-                                .modal-body input {
-                                    width: 100%;
-                                    padding: 10px;
-                                    margin-bottom: 15px;
-                                    box-sizing: border-box;
-                                    border: 1px solid #ccc;
-                                    border-radius: 5px;
-                                }
-                                .modal-body {
-                                    display: block !important;
-                                    max-height: calc(100vh - 200px); /* Ajuste conforme necessário para garantir que o modal-body não ultrapasse a tela */
-                                    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo for maior que a altura disponível */
-                                }
-                               
                             
                                 /* Adiciona um estilo para o botão de enviar no rodapé do modal */
                                 .modal-footer .btn-primary {
@@ -547,16 +512,14 @@
                                 }
                             
                                 .modal-footer .btn-primary:hover {
-                                    background-color: white; /* Cor ao passar o mouse sobre o botão */
+                                    background-color: darkred; /* Cor ao passar o mouse sobre o botão */
                                     /* Adicione mais estilos conforme necessário */
                                 }
                             
                                 .modal.fade.show {
                                     box-shadow: none !important;
                                 }
-                                .modal.show{
-                                    display: block;
-                                }
+                            
                                 /* Remover sombra do modal */
                                 .modal-body {
                                     display: flex;
@@ -570,21 +533,6 @@
                                     max-width: 100%;
                                     max-height: 100%;
                                 }
-                                .cadastrar-btn {
-                                    letter-spacing: .05em;
-                                    color: #fff;
-                                    text-transform: uppercase;
-                                    cursor: pointer;
-                                    background-color: #111;
-                                    border: 2px solid #111;
-                                    margin-top: 30px;
-                                    padding: 10px 40px;
-                                    font-size: 17px;
-                                    font-weight: 500;
-                                    transition: background-color 0.2s, color 0.2s;
-                                    display: inline-block;
-                                }
-                                
                                 
                             </style>
                             
@@ -595,7 +543,9 @@
                         
                           
                           
-                    
+                        
+                         
+                    <button class="btn-form-cadastro-fisico">Cadastrar</button><br>
     
         
         </div>
