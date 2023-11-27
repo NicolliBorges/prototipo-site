@@ -224,7 +224,7 @@
 
 
 				</div>
-			</div>
+			</div>  
 		</div>
 	</nav>
 </div>
@@ -248,7 +248,7 @@
 	});
 
 </script>
-
+    
 
 
 
@@ -336,7 +336,7 @@
                 <div class="input-cadastro-fisico">
                     <label for="">Estado</label>
                     <input type="text" name="estado" required="" class="readonly" tabindex="-1"></div><div class="input-cadastro-fisico"><label for="como_chegou">Como chegou ao site?</label><select name="como_chegou" required=""><option value="Folheto impresso">Folheto impresso</option><option value="Instagram">Instagram</option><option value="Facebook">Facebook</option><option value="Linkedin">Linkedin</option><option value="Imovelweb">Imovelweb</option><option value="VivaReal">VivaReal</option><option value="Zap Imóveis">Zap Imóveis</option><option value="OLX">OLX</option><option value="Publicjud">Publicjud</option><option value="Moving Imóveis">Moving Imóveis</option><option value="Google">Google</option><option value="Outros">Outros</option></select></div></div><div class="btn-cad">
-                         <!--<div class="inputs-cadastro-fisico ofertas-container">
+                        <!--<div class="inputs-cadastro-fisico ofertas-container">
                             <div id="my modal" class="modal-ofertas">
                                 <div id="myModal" class="modal">
                                     <div class="modal-content">
@@ -357,17 +357,20 @@
                                 Clique aqui para receber as melhores oportunidades
                             </button>
                         </div>
-                        
-                        <!-- Modal -->
+
+                  <!-- Modal -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" black>
                                             <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        </button>                                        
                                     </div>
                                     <div class="modal-body">
+                                        <br>
+                                        <br>
+                                        <br>
                                         <form>
                                            <p> Vamos encaminhar as melhores oportunidades diretamente em seu WhatsApp, por isso precisamos que nos informe quais são as suas preferencias:</p>
 
@@ -423,7 +426,7 @@
                                                         <input type="text" id="cidade" name="cidade" required>
                                                     </div>
 
-
+                                                    
 
                                                     <div class="form-group">
                                                         <label for="montante">Montante disponível para investimento:</label>
@@ -482,120 +485,489 @@
                             </div>
                         </div>
                         <style>
-                                /* Restante do seu estilo para o botão no modal */
-                                .btn-modal {
-                                    background-color: black; /* Cor desejada para o botão */
-                                    color: white; /* Cor do texto no botão */
-                                    /* Adicione mais estilos conforme necessário */
-                                }
-                            
-                                .btn-modal:hover {
-                                    background-color: #fff; /* Cor ao passar o mouse sobre o botão */
-                                    color: #111; /* Cor do texto ao passar o mouse sobre o botão */
-                                    /* Adicione mais estilos conforme necessário */
-                                }
-                            
-                                body.modal-open {
-                                    position: fixed;
-                                    width: 100%;
-                                    height: 100%;
-                                    overflow: hidden;
+                            /* Restante do seu estilo para o botão no modal */
+                            .btn-modal {
+                                background-color: black; /* Cor desejada para o botão */
+                                color: white; /* Cor do texto no botão */
+                                /* Adicione mais estilos conforme necessário */
                             }
-                                /* Adiciona um estilo para o modal */
-                                .modal {
-                                    display: none;
-                                    box-shadow: none;
-                                    position: fixed;
-                                    top: 50%;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-                                    width: 80%; /* Ajuste conforme necessário */
-                                    max-height: calc(100vh - 50px); /* Ajuste para garantir que o modal não ultrapasse a altura da tela */
-                                    overflow-y: auto;
-                                    background-color: transparent; /* Alteração aqui: tornando o fundo do modal transparente */
-                                }
+                        
+                            .btn-modal:hover {
+                                background-color: #fff; /* Cor ao passar o mouse sobre o botão */
+                                color: #111; /* Cor do texto ao passar o mouse sobre o botão */
+                                /* Adicione mais estilos conforme necessário */
+                            }
+                        
+                            body.modal-open {
+                                position: fixed;
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+                        }
+                            /* Adiciona um estilo para o modal */
+                            .modal {    
+                                background-color: #fff;
+                                width: 600px;
+                                position: absolute;
+                                top: 30%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                                box-shadow: 0 0 10px #0000004d;
+                                display: none;
+                                box-shadow: none;
+                                position: fixed;    
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 80%; /* Ajuste conforme necessário */
+                                max-height: calc(100vh - 50px); /* Ajuste para garantir que o modal não ultrapasse a altura da tela */
+                                overflow-y: auto;
+                                background-color: transparent; /* Alteração aqui: tornando o fundo do modal transparente */
+                            }
+                        
+                            /* Adiciona um estilo para a área de conteúdo do modal */
+                            .modal-content {
+                                background-color: #fff; /* Cor do fundo do modal */
+                                position: relative;
+                                box-shadow: none;
+                                border-radius: 10px; /* Borda arredondada */
+                            }
+                        
+                            /* Adiciona um estilo para o botão de fechar no modal */
+                            /* Adiciona um estilo para o botão de fechar no modal */
+                            .modal-header .close {
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                color: black; /* Cor do ícone de fechar */
+                                font-size: 24px;
+                            }
+
+                            .modal-body select,
+                            .modal-body input {
+                                width: 100%;
+                                padding: 10px;
+                                margin-bottom: 15px;
+                                box-sizing: border-box;
+                                border: 1px solid #ccc;
+                                border-radius: 5px;
+                            }
+                            .modal-body {
+                                display: block !important;
+                                max-height: calc(100vh - 200px); /* Ajuste conforme necessário para garantir que o modal-body não ultrapasse a tela */
+                                overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo for maior que a altura disponível */
+                            }
+                           
+                        
+                            /* Adiciona um estilo para o botão de enviar no rodapé do modal */
+                            .modal-footer .btn-primary {
+                                background-color: black; /* Cor desejada para o botão */
+                                color: white; /* Cor do texto no botão */
+                                /* Adicione mais estilos conforme necessário */
+                            }
+                        
+                            .modal-footer .btn-primary:hover {
+                                background-color: white; /* Cor ao passar o mouse sobre o botão */
+                                /* Adicione mais estilos conforme necessário */
+                            }
+                        
+                            .modal.fade.show {
+                                box-shadow: none !important;
+                            }
+                            .modal.show{
+                                display: block;
+                            }
                             
-                                /* Adiciona um estilo para a área de conteúdo do modal */
-                                .modal-content {
-                                    background-color: #fff; /* Cor do fundo do modal */
-                                    position: relative;
-                                    box-shadow: none;
-                                    border-radius: 10px; /* Borda arredondada */
-                                }
+                            /* Remover sombra do modal */
+                            .modal-body {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        
+                            /* Ajuste para garantir que o conteúdo do modal não ultrapasse a tela */
+                            .modal-dialog {
+                                max-width: 100%;
+                                max-height: 100%;
+                            }
+                            .cadastrar-btn {
+                                letter-spacing: .05em;
+                                color: #fff;
+                                text-transform: uppercase;
+                                cursor: pointer;
+                                background-color: #111;
+                                border: 2px solid #111;
+                                margin-top: 30px;
+                                padding: 10px 40px;
+                                font-size: 17px;
+                                font-weight: 500;
+                                transition: background-color 0.2s, color 0.2s;
+                                display: inline-block;
+                            }
+                           
                             
-                                /* Adiciona um estilo para o botão de fechar no modal */
-                                .modal-header .close {
-                                    position: absolute;
-                                    top: 10px;
-                                    right: 10px;
-                                    color: black; /* Cor do ícone de fechar */
-                                    font-size: 24px;
-                                }
-                                .modal-body select,
-                                .modal-body input {
-                                    width: 100%;
-                                    padding: 10px;
-                                    margin-bottom: 15px;
-                                    box-sizing: border-box;
-                                    border: 1px solid #ccc;
-                                    border-radius: 5px;
-                                }
-                                .modal-body {
-                                    display: block !important;
-                                    max-height: calc(100vh - 200px); /* Ajuste conforme necessário para garantir que o modal-body não ultrapasse a tela */
-                                    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo for maior que a altura disponível */
-                                }
-                               
-                            
-                                /* Adiciona um estilo para o botão de enviar no rodapé do modal */
-                                .modal-footer .btn-primary {
-                                    background-color: black; /* Cor desejada para o botão */
-                                    color: white; /* Cor do texto no botão */
-                                    /* Adicione mais estilos conforme necessário */
-                                }
-                            
-                                .modal-footer .btn-primary:hover {
-                                    background-color: white; /* Cor ao passar o mouse sobre o botão */
-                                    /* Adicione mais estilos conforme necessário */
-                                }
-                            
-                                .modal.fade.show {
-                                    box-shadow: none !important;
-                                }
-                                .modal.show{
-                                    display: block;
-                                }
-                                /* Remover sombra do modal */
-                                .modal-body {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    align-items: center;
-                                }
-                            
-                                /* Ajuste para garantir que o conteúdo do modal não ultrapasse a tela */
-                                .modal-dialog {
-                                    max-width: 100%;
-                                    max-height: 100%;
-                                }
-                                .cadastrar-btn {
-                                    letter-spacing: .05em;
-                                    color: #fff;
-                                    text-transform: uppercase;
-                                    cursor: pointer;
-                                    background-color: #111;
-                                    border: 2px solid #111;
-                                    margin-top: 30px;
-                                    padding: 10px 40px;
-                                    font-size: 17px;
-                                    font-weight: 500;
-                                    transition: background-color 0.2s, color 0.2s;
-                                    display: inline-block;
-                                }
-                                
-                                
-                            </style>
-                            
+                                                
+                        body, p, h1, h2, ul, li {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        *, :before, :after, ::backdrop {
+                            --tw-border-spacing-x: 0;
+                            --tw-border-spacing-y: 0;
+                            --tw-translate-x: 0;
+                            --tw-translate-y: 0;
+                            --tw-rotate: 0;
+                            --tw-skew-x: 0;
+                            --tw-skew-y: 0;
+                            --tw-scale-x: 1;
+                            --tw-scale-y: 1;
+                            --tw-pan-x: ;
+                            --tw-pan-y: ;
+                            --tw-pinch-zoom: ;
+                            --tw-scroll-snap-strictness: proximity;
+                            --tw-gradient-from-position: ;
+                            --tw-gradient-via-position: ;
+                            --tw-gradient-to-position: ;
+                            --tw-ordinal: ;
+                            --tw-slashed-zero: ;
+                            --tw-numeric-figure: ;
+                            --tw-numeric-spacing: ;
+                            --tw-numeric-fraction: ;
+                            --tw-ring-inset: ;
+                            --tw-ring-offset-width: 0px;
+                            --tw-ring-offset-color: #fff;
+                            --tw-ring-color: #3b82f680;
+                            --tw-ring-offset-shadow: 0 0 #0000;
+                            --tw-ring-shadow: 0 0 #0000;
+                            --tw-shadow: 0 0 #0000;
+                            --tw-shadow-colored: 0 0 #0000;
+                            --tw-blur: ;
+                            --tw-brightness: ;
+                            --tw-contrast: ;
+                            --tw-grayscale: ;
+                            --tw-hue-rotate: ;
+                            --tw-invert: ;
+                            --tw-saturate: ;
+                            --tw-sepia: ;
+                            --tw-drop-shadow: ;
+                            --tw-backdrop-blur: ;
+                            --tw-backdrop-brightness: ;
+                            --tw-backdrop-contrast: ;
+                            --tw-backdrop-grayscale: ;
+                            --tw-backdrop-hue-rotate: ;
+                            --tw-backdrop-invert: ;
+                            --tw-backdrop-opacity: ;
+                            --tw-backdrop-saturate: ;
+                            --tw-backdrop-sepia: ;
+                        }
+                        * {
+                            box-sizing: border-box;
+                            text-rendering: optimizelegibility;
+                            -webkit-font-smoothing: antialiased;
+                        }
+                        user agent stylesheet
+                        :-webkit-any(article, aside, nav, section) h1 {
+                            font-size: 1.5em;
+                            margin-block-start: 0.83em;
+                            margin-block-end: 0.83em;
+                        }
+                        user agent stylesheet
+                        h1 {
+                            display: block;
+                            font-size: 2em;
+                            margin-block-start: 0.67em;
+                            margin-block-end: 0.67em;
+                            margin-inline-start: 0px;
+                            margin-inline-end: 0px;
+                            font-weight: bold;
+                        }
+                        #input-cadastro-fisico .cadastro-fisico-title {
+                            color: #fff;
+                            background: #000;
+                            padding: 12px 20px;
+                        }
+                        body {
+                            background-image: var(--home_bg);
+                            background-position: top;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-attachment: fixed;
+                            font-family: Century Gothic,sans-serif;
+                            font-size: 1rem;
+                            overflow-x: hidden;
+                        }
+                        body {
+                            -webkit-text-size-adjust: 100%;
+                            -ms-text-size-adjust: 100%;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            min-width: 100px;
+                            min-height: 100%;
+                            font-family: Montserrat,sans-serif;
+                            font-size: 14px;
+                            line-height: 1.5;
+                        }
+                        body {
+                            --white: #fff;
+                            --white-70-op: #ffffffb3;
+                            --white-10-op: #ffffff1a;
+                            --black: #000;
+                            --neutral-100: #090a1a;
+                            --neutral-70: #464651;
+                            --neutral-60: #666670;
+                            --neutral-50: #090a1a80;
+                            --neutral-40: #090a1a66;
+                            --neutral-30: #e5e6eb;
+                            --neutral-20: #f0f1f5;
+                            --neutral-10: #f5f6fa;
+                            --primary-light: #8186f7;
+                            --primary-light-10-op: #8288f71a;
+                            --primary-light-30: #a8abfe;
+                            --primary-pure-10: #eaeaf8;
+                            --primary-pure: hsla(var(--hue-primary),64%,54%,1);
+                            --primary-pure-70: #6a6ed1;
+                            --hue-primary: 238;
+                            --alert-error: #e92c2c;
+                            --alert-error-10: #fdeaea;
+                            --alert-warning: #d2af00;
+                            --alert-warning-10: #fbf7e6;
+                            --alert-sucess: #008024;
+                            --alert-sucess-10: #e6f9f0;
+                        }
+                        :root {
+                            --primary: #42ad73;
+                        }
+                        :root {
+                            --home_bg: url(https://alfaleiloes-novo.s3.amazonaws.com/static/front_assets/src/assets/img/home-background.webp);
+                        }
+                        :root {
+                            --q-transition-duration: .3s;
+                        }
+                        :root {
+                            --q-size-xs: 0;
+                            --q-size-sm: 600px;
+                            --q-size-md: 1024px;
+                            --q-size-lg: 1440px;
+                            --q-size-xl: 1920px;
+                        }
+                        :root {
+                            --q-primary: rgb(var(--primary-pure));
+                            --q-secondary: #26a69a;
+                            --q-accent: #9c27b0;
+                            --q-positive: rgb(var(--alert-success));
+                            --q-negative: rgb(var(--alert-error));
+                            --q-info: #31ccec;
+                            --q-warning: rgb(var(--alert-warning));
+                            --q-dark: rgb(var(--d-neutral-30));
+                            --q-dark-page: rgb(var(--d-neutral-10));
+                        }
+                        :root {
+                            --animate-duration: .3s;
+                            --animate-delay: .3s;
+                            --animate-repeat: 1;
+                        }
+                        :root {
+                            --xl-device: 1920px;
+                            --lg-device: 1440px;
+                            --md-device: 1024px;
+                            --md2-device: 768px;
+                            --sm-device: 600px;
+                        }
+                        :root {
+                            --f-button-width: 40px;
+                            --f-button-height: 40px;
+                            --f-button-border: 0;
+                            --f-button-border-radius: 0;
+                            --f-button-color: #374151;
+                            --f-button-bg: #f8f8f8;
+                            --f-button-hover-bg: #e0e0e0;
+                            --f-button-active-bg: #d0d0d0;
+                            --f-button-shadow: none;
+                            --f-button-transition: all 0.15s ease;
+                            --f-button-transform: none;
+                            --f-button-svg-width: 20px;
+                            --f-button-svg-height: 20px;
+                            --f-button-svg-stroke-width: 1.5;
+                            --f-button-svg-fill: none;
+                            --f-button-svg-filter: none;
+                            --f-button-svg-disabled-opacity: 0.65;
+                        }
+                        :root {
+                            --f-spinner-width: 36px;
+                            --f-spinner-height: 36px;
+                            --f-spinner-color-1: rgba(0, 0, 0, 0.1);
+                            --f-spinner-color-2: rgba(17, 24, 28, 0.8);
+                            --f-spinner-stroke: 2.75;
+                        }
+                        :root {
+                            --swiper-navigation-size: 44px;
+                        }
+                        :root {
+                            --swiper-theme-color: #007aff;
+                        }
+                        html {
+                            --font-base: 100%;
+                            font-size: var(--font-base);
+                            overflow-x: hidden;
+                        }
+                        *, :before, :after, ::backdrop {
+                            --tw-border-spacing-x: 0;
+                            --tw-border-spacing-y: 0;
+                            --tw-translate-x: 0;
+                            --tw-translate-y: 0;
+                            --tw-rotate: 0;
+                            --tw-skew-x: 0;
+                            --tw-skew-y: 0;
+                            --tw-scale-x: 1;
+                            --tw-scale-y: 1;
+                            --tw-pan-x: ;
+                            --tw-pan-y: ;
+                            --tw-pinch-zoom: ;
+                            --tw-scroll-snap-strictness: proximity;
+                            --tw-gradient-from-position: ;
+                            --tw-gradient-via-position: ;
+                            --tw-gradient-to-position: ;
+                            --tw-ordinal: ;
+                            --tw-slashed-zero: ;
+                            --tw-numeric-figure: ;
+                            --tw-numeric-spacing: ;
+                            --tw-numeric-fraction: ;
+                            --tw-ring-inset: ;
+                            --tw-ring-offset-width: 0px;
+                            --tw-ring-offset-color: #fff;
+                            --tw-ring-color: #3b82f680;
+                            --tw-ring-offset-shadow: 0 0 #0000;
+                            --tw-ring-shadow: 0 0 #0000;
+                            --tw-shadow: 0 0 #0000;
+                            --tw-shadow-colored: 0 0 #0000;
+                            --tw-blur: ;
+                            --tw-brightness: ;
+                            --tw-contrast: ;
+                            --tw-grayscale: ;
+                            --tw-hue-rotate: ;
+                            --tw-invert: ;
+                            --tw-saturate: ;
+                            --tw-sepia: ;
+                            --tw-drop-shadow: ;
+                            --tw-backdrop-blur: ;
+                            --tw-backdrop-brightness: ;
+                            --tw-backdrop-contrast: ;
+                            --tw-backdrop-grayscale: ;
+                            --tw-backdrop-hue-rotate: ;
+                            --tw-backdrop-invert: ;
+                            --tw-backdrop-opacity: ;
+                            --tw-backdrop-saturate: ;
+                            --tw-backdrop-sepia: ;
+                        }
+                        :after, :before {
+                            box-sizing: border-box;
+                        }
+                        *, :before, :after, ::backdrop {
+                            --tw-border-spacing-x: 0;
+                            --tw-border-spacing-y: 0;
+                            --tw-translate-x: 0;
+                            --tw-translate-y: 0;
+                            --tw-rotate: 0;
+                            --tw-skew-x: 0;
+                            --tw-skew-y: 0;
+                            --tw-scale-x: 1;
+                            --tw-scale-y: 1;
+                            --tw-pan-x: ;
+                            --tw-pan-y: ;
+                            --tw-pinch-zoom: ;
+                            --tw-scroll-snap-strictness: proximity;
+                            --tw-gradient-from-position: ;
+                            --tw-gradient-via-position: ;
+                            --tw-gradient-to-position: ;
+                            --tw-ordinal: ;
+                            --tw-slashed-zero: ;
+                            --tw-numeric-figure: ;
+                            --tw-numeric-spacing: ;
+                            --tw-numeric-fraction: ;
+                            --tw-ring-inset: ;
+                            --tw-ring-offset-width: 0px;
+                            --tw-ring-offset-color: #fff;
+                            --tw-ring-color: #3b82f680;
+                            --tw-ring-offset-shadow: 0 0 #0000;
+                            --tw-ring-shadow: 0 0 #0000;
+                            --tw-shadow: 0 0 #0000;
+                            --tw-shadow-colored: 0 0 #0000;
+                            --tw-blur: ;
+                            --tw-brightness: ;
+                            --tw-contrast: ;
+                            --tw-grayscale: ;
+                            --tw-hue-rotate: ;
+                            --tw-invert: ;
+                            --tw-saturate: ;
+                            --tw-sepia: ;
+                            --tw-drop-shadow: ;
+                            --tw-backdrop-blur: ;
+                            --tw-backdrop-brightness: ;
+                            --tw-backdrop-contrast: ;
+                            --tw-backdrop-grayscale: ;
+                            --tw-backdrop-hue-rotate: ;
+                            --tw-backdrop-invert: ;
+                            --tw-backdrop-opacity: ;
+                            --tw-backdrop-saturate: ;
+                            --tw-backdrop-sepia: ;
+                        }
+                        :after, :before {
+                            box-sizing: border-box;
+                        }
+                        *, :before, :after, ::backdrop {
+                            --tw-border-spacing-x: 0;
+                            --tw-border-spacing-y: 0;
+                            --tw-translate-x: 0;
+                            --tw-translate-y: 0;
+                            --tw-rotate: 0;
+                            --tw-skew-x: 0;
+                            --tw-skew-y: 0;
+                            --tw-scale-x: 1;
+                            --tw-scale-y: 1;
+                            --tw-pan-x: ;
+                            --tw-pan-y: ;
+                            --tw-pinch-zoom: ;
+                            --tw-scroll-snap-strictness: proximity;
+                            --tw-gradient-from-position: ;
+                            --tw-gradient-via-position: ;
+                            --tw-gradient-to-position: ;
+                            --tw-ordinal: ;
+                            --tw-slashed-zero: ;
+                            --tw-numeric-figure: ;
+                            --tw-numeric-spacing: ;
+                            --tw-numeric-fraction: ;
+                            --tw-ring-inset: ;
+                            --tw-ring-offset-width: 0px;
+                            --tw-ring-offset-color: #fff;
+                            --tw-ring-color: #3b82f680;
+                            --tw-ring-offset-shadow: 0 0 #0000;
+                            --tw-ring-shadow: 0 0 #0000;
+                            --tw-shadow: 0 0 #0000;
+                            --tw-shadow-colored: 0 0 #0000;
+                            --tw-blur: ;
+                            --tw-brightness: ;
+                            --tw-contrast: ;
+                            --tw-grayscale: ;
+                            --tw-hue-rotate: ;
+                            --tw-invert: ;
+                            --tw-saturate: ;
+                            --tw-sepia: ;
+                            --tw-drop-shadow: ;
+                            --tw-backdrop-blur: ;
+                            --tw-backdrop-brightness: ;
+                            --tw-backdrop-contrast: ;
+                            --tw-backdrop-grayscale: ;
+                            --tw-backdrop-hue-rotate: ;
+                            --tw-backdrop-invert: ;
+                            --tw-backdrop-opacity: ;
+                            --tw-backdrop-saturate: ;
+                            --tw-backdrop-sepia: ;
+                        }
+
+
+                        </style>
+                        
                 
                         
                             

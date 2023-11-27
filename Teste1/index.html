@@ -67,6 +67,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    <link rel="icon" type="image/x-icon" href="https://alfaleiloes-novo.s3.amazonaws.com/media/assets/Novo_Projeto_11_ROG7qUg.webp">
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" type="text/javascript"></script>
     <script src="
@@ -474,6 +476,8 @@
                             </div>
                         </div>
                         <style>
+                               
+
                                 /* Restante do seu estilo para o botão no modal */
                                 .btn-modal {
                                     background-color: black; /* Cor desejada para o botão */
@@ -581,10 +585,371 @@
                                     padding: 10px 40px;
                                     font-size: 17px;
                                     font-weight: 500;
-                                    transition: background-color 0.2s, color 0.2s;
+                                    transition: all .2s;
                                     display: inline-block;
+                                    margin: auto;
                                 }
+                                :root {
+                                    --home_bg: url(https://alfaleiloes-novo.s3.amazonaws.com/static/front_assets/src/assets/img/home-background.webp);
                                 
+                                }
+                                body, p, h1, h2, ul, li {
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                                *, :before, :after, ::backdrop {
+                                    --tw-border-spacing-x: 0;
+                                    --tw-border-spacing-y: 0;
+                                    --tw-translate-x: 0;
+                                    --tw-translate-y: 0;
+                                    --tw-rotate: 0;
+                                    --tw-skew-x: 0;
+                                    --tw-skew-y: 0;
+                                    --tw-scale-x: 1;
+                                    --tw-scale-y: 1;
+                                    --tw-pan-x: ;
+                                    --tw-pan-y: ;
+                                    --tw-pinch-zoom: ;
+                                    --tw-scroll-snap-strictness: proximity;
+                                    --tw-gradient-from-position: ;
+                                    --tw-gradient-via-position: ;
+                                    --tw-gradient-to-position: ;
+                                    --tw-ordinal: ;
+                                    --tw-slashed-zero: ;
+                                    --tw-numeric-figure: ;
+                                    --tw-numeric-spacing: ;
+                                    --tw-numeric-fraction: ;
+                                    --tw-ring-inset: ;
+                                    --tw-ring-offset-width: 0px;
+                                    --tw-ring-offset-color: #fff;
+                                    --tw-ring-color: #3b82f680;
+                                    --tw-ring-offset-shadow: 0 0 #0000;
+                                    --tw-ring-shadow: 0 0 #0000;
+                                    --tw-shadow: 0 0 #0000;
+                                    --tw-shadow-colored: 0 0 #0000;
+                                    --tw-blur: ;
+                                    --tw-brightness: ;
+                                    --tw-contrast: ;
+                                    --tw-grayscale: ;
+                                    --tw-hue-rotate: ;
+                                    --tw-invert: ;
+                                    --tw-saturate: ;
+                                    --tw-sepia: ;
+                                    --tw-drop-shadow: ;
+                                    --tw-backdrop-blur: ;
+                                    --tw-backdrop-brightness: ;
+                                    --tw-backdrop-contrast: ;
+                                    --tw-backdrop-grayscale: ;
+                                    --tw-backdrop-hue-rotate: ;
+                                    --tw-backdrop-invert: ;
+                                    --tw-backdrop-opacity: ;
+                                    --tw-backdrop-saturate: ;
+                                    --tw-backdrop-sepia: ;
+                                }
+                                * {
+                                    box-sizing: border-box;
+                                    text-rendering: optimizelegibility;
+                                    -webkit-font-smoothing: antialiased;
+                                }
+                                user agent stylesheet
+                                :-webkit-any(article, aside, nav, section) h1 {
+                                    font-size: 1.5em;
+                                    margin-block-start: 0.83em;
+                                    margin-block-end: 0.83em;
+                                }
+                                user agent stylesheet
+                                h1 {
+                                    display: block;
+                                    font-size: 2em;
+                                    margin-block-start: 0.67em;
+                                    margin-block-end: 0.67em;
+                                    margin-inline-start: 0px;
+                                    margin-inline-end: 0px;
+                                    font-weight: bold;
+                                }
+                                #input-cadastro-fisico .cadastro-fisico-title {
+                                    color: #fff;
+                                    background: #000;
+                                    padding: 12px 20px;
+                                }
+                                body {
+                                    background-image: var(--home_bg);
+                                    background-position: top;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-attachment: fixed;
+                                    font-family: Century Gothic,sans-serif;
+                                    font-size: 1rem;
+                                    overflow-x: hidden;
+                                }
+                                body {
+                                    -webkit-text-size-adjust: 100%;
+                                    -ms-text-size-adjust: 100%;
+                                    -webkit-font-smoothing: antialiased;
+                                    -moz-osx-font-smoothing: grayscale;
+                                    min-width: 100px;
+                                    min-height: 100%;
+                                    font-family: Montserrat,sans-serif;
+                                    font-size: 14px;
+                                    line-height: 1.5;
+                                }
+                                body {
+                                    --white: #fff;
+                                    --white-70-op: #ffffffb3;
+                                    --white-10-op: #ffffff1a;
+                                    --black: #000;
+                                    --neutral-100: #090a1a;
+                                    --neutral-70: #464651;
+                                    --neutral-60: #666670;
+                                    --neutral-50: #090a1a80;
+                                    --neutral-40: #090a1a66;
+                                    --neutral-30: #e5e6eb;
+                                    --neutral-20: #f0f1f5;
+                                    --neutral-10: #f5f6fa;
+                                    --primary-light: #8186f7;
+                                    --primary-light-10-op: #8288f71a;
+                                    --primary-light-30: #a8abfe;
+                                    --primary-pure-10: #eaeaf8;
+                                    --primary-pure: hsla(var(--hue-primary),64%,54%,1);
+                                    --primary-pure-70: #6a6ed1;
+                                    --hue-primary: 238;
+                                    --alert-error: #e92c2c;
+                                    --alert-error-10: #fdeaea;
+                                    --alert-warning: #d2af00;
+                                    --alert-warning-10: #fbf7e6;
+                                    --alert-sucess: #008024;
+                                    --alert-sucess-10: #e6f9f0;
+                                }
+                                :root {
+                                    --primary: #42ad73;
+                                }
+                                :root {
+                                    --home_bg: url(https://alfaleiloes-novo.s3.amazonaws.com/static/front_assets/src/assets/img/home-background.webp);
+                                }
+                                :root {
+                                    --q-transition-duration: .3s;
+                                }
+                                :root {
+                                    --q-size-xs: 0;
+                                    --q-size-sm: 600px;
+                                    --q-size-md: 1024px;
+                                    --q-size-lg: 1440px;
+                                    --q-size-xl: 1920px;
+                                }
+                                :root {
+                                    --q-primary: rgb(var(--primary-pure));
+                                    --q-secondary: #26a69a;
+                                    --q-accent: #9c27b0;
+                                    --q-positive: rgb(var(--alert-success));
+                                    --q-negative: rgb(var(--alert-error));
+                                    --q-info: #31ccec;
+                                    --q-warning: rgb(var(--alert-warning));
+                                    --q-dark: rgb(var(--d-neutral-30));
+                                    --q-dark-page: rgb(var(--d-neutral-10));
+                                }
+                                :root {
+                                    --animate-duration: .3s;
+                                    --animate-delay: .3s;
+                                    --animate-repeat: 1;
+                                }
+                                :root {
+                                    --xl-device: 1920px;
+                                    --lg-device: 1440px;
+                                    --md-device: 1024px;
+                                    --md2-device: 768px;
+                                    --sm-device: 600px;
+                                }
+                                :root {
+                                    --f-button-width: 40px;
+                                    --f-button-height: 40px;
+                                    --f-button-border: 0;
+                                    --f-button-border-radius: 0;
+                                    --f-button-color: #374151;
+                                    --f-button-bg: #f8f8f8;
+                                    --f-button-hover-bg: #e0e0e0;
+                                    --f-button-active-bg: #d0d0d0;
+                                    --f-button-shadow: none;
+                                    --f-button-transition: all 0.15s ease;
+                                    --f-button-transform: none;
+                                    --f-button-svg-width: 20px;
+                                    --f-button-svg-height: 20px;
+                                    --f-button-svg-stroke-width: 1.5;
+                                    --f-button-svg-fill: none;
+                                    --f-button-svg-filter: none;
+                                    --f-button-svg-disabled-opacity: 0.65;
+                                }
+                                :root {
+                                    --f-spinner-width: 36px;
+                                    --f-spinner-height: 36px;
+                                    --f-spinner-color-1: rgba(0, 0, 0, 0.1);
+                                    --f-spinner-color-2: rgba(17, 24, 28, 0.8);
+                                    --f-spinner-stroke: 2.75;
+                                }
+                                :root {
+                                    --swiper-navigation-size: 44px;
+                                }
+                                :root {
+                                    --swiper-theme-color: #007aff;
+                                }
+                                html {
+                                    --font-base: 100%;
+                                    font-size: var(--font-base);
+                                    overflow-x: hidden;
+                                }
+                                *, :before, :after, ::backdrop {
+                                    --tw-border-spacing-x: 0;
+                                    --tw-border-spacing-y: 0;
+                                    --tw-translate-x: 0;
+                                    --tw-translate-y: 0;
+                                    --tw-rotate: 0;
+                                    --tw-skew-x: 0;
+                                    --tw-skew-y: 0;
+                                    --tw-scale-x: 1;
+                                    --tw-scale-y: 1;
+                                    --tw-pan-x: ;
+                                    --tw-pan-y: ;
+                                    --tw-pinch-zoom: ;
+                                    --tw-scroll-snap-strictness: proximity;
+                                    --tw-gradient-from-position: ;
+                                    --tw-gradient-via-position: ;
+                                    --tw-gradient-to-position: ;
+                                    --tw-ordinal: ;
+                                    --tw-slashed-zero: ;
+                                    --tw-numeric-figure: ;
+                                    --tw-numeric-spacing: ;
+                                    --tw-numeric-fraction: ;
+                                    --tw-ring-inset: ;
+                                    --tw-ring-offset-width: 0px;
+                                    --tw-ring-offset-color: #fff;
+                                    --tw-ring-color: #3b82f680;
+                                    --tw-ring-offset-shadow: 0 0 #0000;
+                                    --tw-ring-shadow: 0 0 #0000;
+                                    --tw-shadow: 0 0 #0000;
+                                    --tw-shadow-colored: 0 0 #0000;
+                                    --tw-blur: ;
+                                    --tw-brightness: ;
+                                    --tw-contrast: ;
+                                    --tw-grayscale: ;
+                                    --tw-hue-rotate: ;
+                                    --tw-invert: ;
+                                    --tw-saturate: ;
+                                    --tw-sepia: ;
+                                    --tw-drop-shadow: ;
+                                    --tw-backdrop-blur: ;
+                                    --tw-backdrop-brightness: ;
+                                    --tw-backdrop-contrast: ;
+                                    --tw-backdrop-grayscale: ;
+                                    --tw-backdrop-hue-rotate: ;
+                                    --tw-backdrop-invert: ;
+                                    --tw-backdrop-opacity: ;
+                                    --tw-backdrop-saturate: ;
+                                    --tw-backdrop-sepia: ;
+                                }
+                                :after, :before {
+                                    box-sizing: border-box;
+                                }
+                                *, :before, :after, ::backdrop {
+                                    --tw-border-spacing-x: 0;
+                                    --tw-border-spacing-y: 0;
+                                    --tw-translate-x: 0;
+                                    --tw-translate-y: 0;
+                                    --tw-rotate: 0;
+                                    --tw-skew-x: 0;
+                                    --tw-skew-y: 0;
+                                    --tw-scale-x: 1;
+                                    --tw-scale-y: 1;
+                                    --tw-pan-x: ;
+                                    --tw-pan-y: ;
+                                    --tw-pinch-zoom: ;
+                                    --tw-scroll-snap-strictness: proximity;
+                                    --tw-gradient-from-position: ;
+                                    --tw-gradient-via-position: ;
+                                    --tw-gradient-to-position: ;
+                                    --tw-ordinal: ;
+                                    --tw-slashed-zero: ;
+                                    --tw-numeric-figure: ;
+                                    --tw-numeric-spacing: ;
+                                    --tw-numeric-fraction: ;
+                                    --tw-ring-inset: ;
+                                    --tw-ring-offset-width: 0px;
+                                    --tw-ring-offset-color: #fff;
+                                    --tw-ring-color: #3b82f680;
+                                    --tw-ring-offset-shadow: 0 0 #0000;
+                                    --tw-ring-shadow: 0 0 #0000;
+                                    --tw-shadow: 0 0 #0000;
+                                    --tw-shadow-colored: 0 0 #0000;
+                                    --tw-blur: ;
+                                    --tw-brightness: ;
+                                    --tw-contrast: ;
+                                    --tw-grayscale: ;
+                                    --tw-hue-rotate: ;
+                                    --tw-invert: ;
+                                    --tw-saturate: ;
+                                    --tw-sepia: ;
+                                    --tw-drop-shadow: ;
+                                    --tw-backdrop-blur: ;
+                                    --tw-backdrop-brightness: ;
+                                    --tw-backdrop-contrast: ;
+                                    --tw-backdrop-grayscale: ;
+                                    --tw-backdrop-hue-rotate: ;
+                                    --tw-backdrop-invert: ;
+                                    --tw-backdrop-opacity: ;
+                                    --tw-backdrop-saturate: ;
+                                    --tw-backdrop-sepia: ;
+                                }
+                                :after, :before {
+                                    box-sizing: border-box;
+                                }
+                                *, :before, :after, ::backdrop {
+                                    --tw-border-spacing-x: 0;
+                                    --tw-border-spacing-y: 0;
+                                    --tw-translate-x: 0;
+                                    --tw-translate-y: 0;
+                                    --tw-rotate: 0;
+                                    --tw-skew-x: 0;
+                                    --tw-skew-y: 0;
+                                    --tw-scale-x: 1;
+                                    --tw-scale-y: 1;
+                                    --tw-pan-x: ;
+                                    --tw-pan-y: ;
+                                    --tw-pinch-zoom: ;
+                                    --tw-scroll-snap-strictness: proximity;
+                                    --tw-gradient-from-position: ;
+                                    --tw-gradient-via-position: ;
+                                    --tw-gradient-to-position: ;
+                                    --tw-ordinal: ;
+                                    --tw-slashed-zero: ;
+                                    --tw-numeric-figure: ;
+                                    --tw-numeric-spacing: ;
+                                    --tw-numeric-fraction: ;
+                                    --tw-ring-inset: ;
+                                    --tw-ring-offset-width: 0px;
+                                    --tw-ring-offset-color: #fff;
+                                    --tw-ring-color: #3b82f680;
+                                    --tw-ring-offset-shadow: 0 0 #0000;
+                                    --tw-ring-shadow: 0 0 #0000;
+                                    --tw-shadow: 0 0 #0000;
+                                    --tw-shadow-colored: 0 0 #0000;
+                                    --tw-blur: ;
+                                    --tw-brightness: ;
+                                    --tw-contrast: ;
+                                    --tw-grayscale: ;
+                                    --tw-hue-rotate: ;
+                                    --tw-invert: ;
+                                    --tw-saturate: ;
+                                    --tw-sepia: ;
+                                    --tw-drop-shadow: ;
+                                    --tw-backdrop-blur: ;
+                                    --tw-backdrop-brightness: ;
+                                    --tw-backdrop-contrast: ;
+                                    --tw-backdrop-grayscale: ;
+                                    --tw-backdrop-hue-rotate: ;
+                                    --tw-backdrop-invert: ;
+                                    --tw-backdrop-opacity: ;
+                                    --tw-backdrop-saturate: ;
+                                    --tw-backdrop-sepia: ;
+                                }
+        
                                 
                             </style>
                             
